@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Quiz: Ai là hung thủ?</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 2rem; }
+    button { display: block; margin: 0.5rem 0; padding: 0.7rem 1.2rem; border: none; border-radius: 8px; background: #007bff; color: white; cursor: pointer; }
+    button:hover { background: #0056b3; }
+    .feedback { margin-top: 1rem; font-weight: bold; }
+  </style>
+</head>
+<body>
+  <h1>Ai là kẻ sát nhân?</h1>
+  <button onclick="check('A')">A. Sam Williams</button>
+  <button onclick="check('B')">B. Martin Park</button>
+  <button onclick="check('C')">C. Jerry Andersen</button>
+  <div id="feedback" class="feedback"></div>
+
+  <script>
+    const correct = 'B'; // đáp án đúng
+    function check(choice) {
+      const f = document.getElementById('feedback');
+      if (choice === correct) {
+        f.style.color = 'green';
+        f.textContent = '🎉 Chính xác! Hung thủ là Martin Park. Đây là thông tin thêm...';
+      } else {
+        f.style.color = 'red';
+        f.textContent = '❌ Sai rồi, hãy thử lại!';
+      }
+    }
+  </script>
+</body>
+</html>
